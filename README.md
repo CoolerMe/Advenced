@@ -1,20 +1,10 @@
+### 正式课程的第一周作业:
+启动后见 http://localhost:8080/advenced/tag.jsp 设定返回报文的 Header:Cache-Control Pragma Expires
+具体见 com.coolme.advanced.servlet.tag.CacheTag 还有 cache.tld tag.jsp 三个文件
+
+
+
 ### 第三周的作业见“tomcat 在被 shutdown 的时候的主要流程.md”
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ### 这个是正式开课前的 week2 的作业直接加了一个文档
