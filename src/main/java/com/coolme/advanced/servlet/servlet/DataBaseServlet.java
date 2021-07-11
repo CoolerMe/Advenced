@@ -3,6 +3,7 @@ package com.coolme.advanced.servlet.servlet;
 import com.coolme.advanced.servlet.db.DatabaseManager;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,6 +24,12 @@ public class DataBaseServlet extends HttpServlet {
         Connection connection = getConnectionFromDatabaseManager();
 
         resp.getWriter().write("得到的 Connection 为：" + connection);
+        try {
+            Thread.sleep(200);
+            connection.close();
+        } catch (SQLException | InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 

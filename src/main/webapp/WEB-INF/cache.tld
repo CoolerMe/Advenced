@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>myshortname</short-name>
+    <uri>http://mycompany.com</uri>
+
+
+    <!--    ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();-->
+    <!--    HttpServletResponse response = attributes.getResponse();-->
+    <!--    response.setHeader("Cache-Control", "no-cache");-->
+    <!--    response.setHeader("Pragma", "no-cache");-->
+    <!--    response.setDateHeader("Expires", -1);-->
+    <tag>
+        <name>cacheTag</name>
+        <tag-class>com.coolme.advanced.servlet.tag.CacheTag</tag-class>
+        <body-content>scriptless</body-content>
+
+        <attribute>
+            <name>cache_control</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+
+        <attribute>
+            <name>pragma</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+
+        <attribute>
+            <name>expires</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+            <type>long</type>
+        </attribute>
+
+    </tag>
+
+
+    <!-- Invoke 'Generate' action to add tags or functions -->
+
+</taglib>
